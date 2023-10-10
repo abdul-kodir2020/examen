@@ -2,18 +2,14 @@ import urllib.request
 from PipelineData import requestUrl , transform , load , extract_model
 
 
-
+# Chargement de la donnée
 data = requestUrl("https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv")
 
+# Néttoyage de données
+data_cleaned = transform(data)
 
-donnees_passager = extract_model(data)
+# Extraire le model
+donnees_passager = extract_model(data_cleaned)
 
-
-data_cleaned = transform(donnees_passager)
-print(data)
-
-load(data_cleaned)
-
-print(donnees_passager)
-
-
+# Création du fichier json
+load(donnees_passager)
