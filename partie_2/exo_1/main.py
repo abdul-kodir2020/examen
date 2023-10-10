@@ -16,7 +16,7 @@ mask_survived = titanic_data['Survived'] == 1
 female_under_18_survived = titanic_data[mask_female & mask_under_18 & mask_survived]
 female_under_18_survived_number = len(female_under_18_survived)
 
-print(f"{female_under_18_survived_number} femmes de moins de 18 ans ont survécues.")
+print(f"{female_under_18_survived_number} femmes de moins de 18 ans ont survécus.")
 
 
 
